@@ -554,12 +554,22 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .items-center {
   align-items: center;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .bg-red-500 {
@@ -578,4 +588,10 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+@media (min-width: 786px) {
+  .md\:flex {
+    display: flex;
+  }
 }
